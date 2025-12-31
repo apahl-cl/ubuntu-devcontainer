@@ -34,5 +34,6 @@
         }
     ],
     // Mount the parent as /workspaces so we can pip install peers as editable
-    "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind"
+    "workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind",
+    "features":{    "ghcr.io/devcontainers/features/docker-in-docker:2": {}}
 }

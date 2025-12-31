@@ -1,21 +1,21 @@
 # The devcontainer should use the developer target and run as root with podman
 # or docker with user namespaces.
-FROM ubuntu:noble-20251013
+FROM debian:bookworm-slim
 
 # Add any system dependencies for the developer/build environment here
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        build-essential \
-        busybox \
-        ca-certificates \
-        curl \
-        gdb \
-        git \
-        less \
-        locales \
-        man-db \
-        ssh-client \
-        zsh && \
+    build-essential \
+    busybox \
+    ca-certificates \
+    curl \
+    gdb \
+    git \
+    less \
+    locales \
+    man-db \
+    ssh-client \
+    zsh && \
     apt-get dist-clean
 
 # VSCode will use en_US for git operations, so make it available in the container
